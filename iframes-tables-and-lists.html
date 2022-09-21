@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iframes and Lists</title>
+    <link rel="icon" type="image/x-icon" href="images/initials.png" /> 
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>Iframes and Lists</h1>
+    <h3>Have some elevator music</h3>
+ 
+    <!--Iframes allow you to take portions of other webpages and display them on your own. They aren't used often as they could cause
+        security issues. A good example of using an iframe would be a youtube video or google maps.
+    
+    Frameborder is a boolean, 0 (off), 1 (on)
+    
+    Here is an example of inline styling. style="width:100%; height:600px; border: 4px solid black;" This could be used to give
+    the same results with the addition of a four pixel black border.
+    -->
+    <a href="https://www.youtube.com/watch?v=xy_NKN75Jhw" target="_blank">Click to view the embeded video of the elevator music on YouTube.</a>
+    <br />
+    <iframe width="60%" height="480px" frameborder src="https://www.youtube.com/embed/xy_NKN75Jhw" title="A video with elevator music showing a speaker icon." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <br />
+
+    <!--This is an HTML table.-->
+    <table>
+        <!--Table rows <tr>-->
+        <tr>
+            <!--Table headings <th>. Non breaking space &nbsp. &nbsp; is an entity, entities display special characters on a website. 
+            Entities can use names (&nbsp;) or numbers (&#160;).-->
+            <th>&nbsp;&nbsp;Teacher Name&nbsp;&nbsp;</th> 
+            <th>&nbsp;&nbsp;Web Development&nbsp;&nbsp;</th>
+            <th>&nbsp;&nbsp;School&nbsp;&nbsp;</th>
+        </tr>
+        <tr>
+            <!--Table data <td>-->
+            <td>Mr. Peers</td>
+            <td>ELA</td>
+            <td>PTEC</td>
+        </tr>
+        <tr>
+            <td>Mr. Hardman</td>
+            <td>Web Development</td>
+            <td>PTEC</td>
+        </tr>
+        <tr>
+            <td>Mr. Zielke</td>
+            <td>ELA</td>
+            <td>Shaftesbury</td>
+        </tr>
+    </table>
+
+    
+
+    <br />
+
+<p>Unordered list:</p>
+        <ul type="square"> <!--ul (unordered list), ol (ordered list)-->
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+                <ol type="A" start="2"> <!--type="I" (Roman Numerals)-->
+                    <li>This sublist starts with B because I told it to</li>
+                    <li>Sublist Item C</li>
+                </ol>
+            <li>Item 4</li>
+        </ul>
+<br />
+    <p>Description list:</p>
+        <dl>
+            <dt>Description term</dt>
+            <dd>- Description defenition</dd>
+            <dt>Description term 2</dt>
+            <dd>- Description defenition 2</dd>
+
+        </dl>
+</body>
+
+<p>&#169; Grace Knutson</p>
+</html>
