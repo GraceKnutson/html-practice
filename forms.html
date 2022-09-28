@@ -9,15 +9,30 @@
 <body>
     <h1>Travel Suggestions</h1>
 
+    <fieldset>
     <form name="travel-suggestions" id="show" method="get"> <!--method="get" for public info, method="post" for personal info-->
         <label for="travel-location">Please Enter the City or Country You Suggest I Travel To (Required):</label>
         <input type="text" name="destination" id="travel-location" required />
         <br />
+        <br />
         <label for="password">Please Enter your Password:</label>
         <input type="password" name="user-password" id="password" />
         <br />
-        <label for="nationality">Are you Canadian?</label>
-        <input type="checkbox" name="canadian" id="nationality" />
+        <br />
+        <legend>Are You Canadian?</legend>
+        <label for="canadian">Yes</label>
+        <input type="checkbox" name="canada" id="canadian" />
+        <br />
+        <label for="not-canadian">No</label>
+        <input type="checkbox" name="not-canada" id="not-canadian" />
+        <br />
+        <br />
+        <label for="email-address">Please Enter Your E-mail Address:</label>
+        <input type="email" name="email" id="email-address" minlength="6" maxlength="40" />
+        <br />
+        <label for="password">Please Enter Your Password:</label>
+        <input type="password" name="userPassword" id="password" minlength="10" />
+    </fieldset>
     </form>
 </body>
 </html>
