@@ -25,26 +25,63 @@
         <br />
 
         <fieldset form="code-form">
-        <legend>Do you code?</legend> <!--Legends describe how inputs in the feildset are related-->
+            <legend>Do you code?</legend>
+            <input type="radio" name="code-type" id="yes" value="yes" />
+            <label for="yes">Yes</label>
+            <input type="radio" name="code-type" id="no" value="no" />
+            <label for="no">No</label> <!--Names should be the same.-->
+        </fieldset>
 
-        <label for="coder">Yes</label>
-        <input type="checkbox" name="coders" id="coder" value="coder-yes" /> <!--Value attribute is required. It provides value to to 
+        <br />
+        <br />
+        
+        <fieldset form="code-known">
+        <legend>What languages do you know?</legend> <!--Legends describe how inputs in the feildset are related-->
+
+
+        <label for="java-script">JavaScript</label>
+        <input type="checkbox" name="java-script" id="java-script" value="java-script" />
+
+        <br />
+        <label for="html">HTML</label>
+        <input type="checkbox" name="html" id="html" value="html" /> <!--Value attribute is required. It provides value to to 
             the server if the user checks and submits. In this case it would be passed to the server as coders=coder-yes. Name and value.-->
+        
         <br />
-        <label for="not-coder">No</label>
-        <input type="checkbox" name="not-code" id="not-coder" value="not-coder" />
+        <label for="css">CSS</label>
+        <input type="checkbox" name="css" id="css" value="css" />
+        
+        <br />
+        <label for="php">PHP</label>
+        <input type="checkbox" name="php" id="php" value="php" />
+        
+        <br />
+        <label for="sql">SQL</label>
+        <input type="checkbox" name="sql" id="sql" value="sql" />
+
+        <br />
+        <label for="python">Python</label>
+        <input type="checkbox" name="python" id="python" value="python" />
+
+        <br />
+        <label for="ruby">Ruby</label>
+        <input type="checkbox" name="ruby" id="ruby" value="ruby" />
+
+        <br />
+        <label for="java">Java</label>
+        <input type="checkbox" name="java" id="java" value="java" />
+
+        <br />
+        <label for="c++">C++</label>
+        <input type="checkbox" name="c++" id="c++" value="c++" />
+
+        
         </fieldset>
 
         <br />
         <br />
 
-        <fieldset form="code-form">
-        <legend>Do you prefer back-end or front-end coding?</legend>
-        <input type="radio" name="codeType" id="front" value="front" />
-        <label for="front">Front-End</label>
-        <input type="radio" name="codeType" id="back" value="back" />
-        <label for="back">Front-End</label> <!--Names should be the same.-->
-        </fieldset>
+        
         
 
         <label for="codelang">What's your favourite coding language?</label>
@@ -66,28 +103,29 @@
         <option value="Java">Java</option>
         <option value="C++">C++</option>
         </optgroup>
-
-        <option value="Other">Other</option>
+        
+        <option value="other">Other</option>
+        <option value="no-code">I don't code</option>
+        </select>
         
     
-
         <br />
         <br />
 
-        <label for="telephone">Please enter your telephone number [Example: 1-877-527-7454]:</label>
-        <input type="tel" name="userTel" id="telephone" minlength="14" maxlength="22" />
-
-        <br />
-        <br />
-
-        <label for="email-address">Please Enter Your E-mail Address:</label>
+        <label for="email-address">Please Enter Your E-mail Address [Example: emails@email.com]:</label>
         <input type="email" name="email" id="email-address" minlength="6" maxlength="40" />
 
         <br />
         <br />
 
+        <label for="telephone">Please enter your telephone number [Example: 1-877-527-7454]:</label>
+        <input type="tel" name="user-tel" id="telephone" minlength="14" maxlength="22" />
+
+        <br />
+        <br />
+
         <label for="password">Please Enter Your Password:</label>
-        <input type="password" name="userPassword" id="password" minlength="10" />
+        <input type="password" name="user-password" id="password" minlength="10" />
 
         <br />
         <br />
@@ -99,13 +137,19 @@
 
         <br />
 
-        <textarea name="additionalComments" id="comments" rows="10" cols="50"></textarea>
+        <textarea name="additional-comments" id="comments" rows="10" cols="50"></textarea>
 
         <br />
         <br />
         
-        <input type="submit" name="submitButton" id="submit" value="Submit" />
-        <input type="reset"/>
+        <input type="submit" name="submit-button" id="submit" value="Submit" />
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <input type="reset" name="clear-form" id="clear" value="Click to Reset" />
         
 
         
