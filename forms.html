@@ -9,30 +9,107 @@
 <body>
     <h1>Travel Suggestions</h1>
 
-    <fieldset>
-    <form name="travel-suggestions" id="show" method="get"> <!--method="get" for public info, method="post" for personal info-->
-        <label for="travel-location">Please Enter the City or Country You Suggest I Travel To (Required):</label>
-        <input type="text" name="destination" id="travel-location" required />
+    
+    <form name="code-form" id="show" method="get"> <!--method="get" for public info, method="post" for personal info-->
+
+        <label for="name">Please Enter Your Name (Required):</label>
+        <input type="text" name="names" id="name" required />
+
         <br />
         <br />
+
         <label for="password">Please Enter your Password:</label>
         <input type="password" name="user-password" id="password" />
+
         <br />
         <br />
-        <legend>Are You Canadian?</legend>
-        <label for="canadian">Yes</label>
-        <input type="checkbox" name="canada" id="canadian" />
+
+        <fieldset form="code-form">
+        <legend>Do you code?</legend> <!--Legends describe how inputs in the feildset are related-->
+
+        <label for="coder">Yes</label>
+        <input type="checkbox" name="coders" id="coder" value="coder-yes" /> <!--Value attribute is required. It provides value to to 
+            the server if the user checks and submits. In this case it would be passed to the server as coders=coder-yes. Name and value.-->
         <br />
-        <label for="not-canadian">No</label>
-        <input type="checkbox" name="not-canada" id="not-canadian" />
+        <label for="not-coder">No</label>
+        <input type="checkbox" name="not-code" id="not-coder" value="not-coder" />
+        </fieldset>
+
         <br />
         <br />
+
+        <fieldset form="code-form">
+        <legend>Do you prefer back-end or front-end coding?</legend>
+        <input type="radio" name="codeType" id="front" value="front" />
+        <label for="front">Front-End</label>
+        <input type="radio" name="codeType" id="back" value="back" />
+        <label for="back">Front-End</label> <!--Names should be the same.-->
+        </fieldset>
+        
+
+        <label for="codelang">What's your favourite coding language?</label>
+        <select name="language" id="codelang"> <!--Select inputs are widely used but can cause accessibility issues. If you can 
+            accomplish the same thing with another input (i.e., radio buttons, text-based, etc.), you should use another method to obtain
+            the information-->
+
+        <optgroup label="Front-End"> <!--Optgroups-->
+        <option value="JavaScript">JavaScript</option>
+        <option value="CSS">CSS</option>
+        <option value="HTML">HTML</option>
+        </optgroup>
+
+        <optgroup label="Back-End">
+        <option value="PHP">PHP</option>
+        <option value="SQL">SQL</option>
+        <option value="Python">Python</option>
+        <option value="Ruby">Ruby</option>
+        <option value="Java">Java</option>
+        <option value="C++">C++</option>
+        </optgroup>
+
+        <option value="Other">Other</option>
+        
+    
+
+        <br />
+        <br />
+
+        <label for="telephone">Please enter your telephone number [Example: 1-877-527-7454]:</label>
+        <input type="tel" name="userTel" id="telephone" minlength="14" maxlength="22" />
+
+        <br />
+        <br />
+
         <label for="email-address">Please Enter Your E-mail Address:</label>
         <input type="email" name="email" id="email-address" minlength="6" maxlength="40" />
+
         <br />
+        <br />
+
         <label for="password">Please Enter Your Password:</label>
         <input type="password" name="userPassword" id="password" minlength="10" />
-    </fieldset>
+
+        <br />
+        <br />
+
+        
+        
+
+        <label for="comments">Additional Comments:</label>
+
+        <br />
+
+        <textarea name="additionalComments" id="comments" rows="10" cols="50"></textarea>
+
+        <br />
+        <br />
+        
+        <input type="submit" name="submitButton" id="submit" value="Submit" />
+        <input type="reset"/>
+        
+
+        
+    
     </form>
 </body>
 </html>
